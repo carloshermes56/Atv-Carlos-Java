@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.function.DoubleBinaryOperator;
 
 public class ExercicioUm {
 
@@ -30,20 +31,55 @@ public class ExercicioUm {
 
         switch (menu) {
             // 1) Crie um programa que calcule a média (`(nota1 + nota2 + nota3 / 3)`)
+            
             case 1:
                 // media(double notaUm, double notaDois, double notaTres)
+              double nota1 = 10, nota2 = 2, nota3 = 7,media;  
+
+              media = media(nota1 , nota2 , nota3);
+
+              System.out.println("media das notas: " + media);
+
+
                 break;
-            // 2) Crie um programa que calcule a área (`lado1 * lado2`)
+            
+            
+            
+                // 2) Crie um programa que calcule a área (`lado1 * lado2`)
             case 2:
                 // area(double ladoUm, double ladoDois)
+                double lado1= 5, lado2= 10, area;
+
+                area = area(lado1 , lado2);
+
+                System.out.println("area:");
+
                 break;
             // 3) Crie um programa que calcule o volume (`largura * altura * profundidade`)
             case 3:
                 // volume(double largura, double altura, double profundidade)
+                double largura= 5 , altura= 7, profundidade= 15, volume;
+
+                volume = volume(largura, altura, profundidade);
+                System.out.println("o volume e:");
+
                 break;
             // 4) Crie um programa que avalie se um valor é maior do que o dobro de outro valor
             case 4:
                 // valorMaiorQueDobro(double base, double verificar)
+    
+                System.out.println("Digite o primeiro valor: ");
+                Double valor1 = scanner.nextDouble();
+
+                System.out.println("Digite o segundo valor: ");
+                Double valor2 = scanner.nextDouble();
+
+                if(valor1 > valor2 * 2){
+                     System.out.printf("%.2f é maior do que o dobro de %.2f%n",valor1, valor2);
+                 } else{
+                    System.out.printf("%.2f é menor que o dobro de %.2f%n",valor1, valor2);
+                }
+
                 break;
             // 5) Crie um programa que calcule _bhaskara_
             case 5:
@@ -52,6 +88,18 @@ public class ExercicioUm {
             // 6) Crie um programa que calcule a velocidade média de uma viagem (`distancia (km) / tempo (h)`)
             case 6:
                 // mediaViagem(double distancia, double tempo)
+                Double mediaViagem;
+
+                System.out.println("Digite a distancia: ");
+                double distancia = scanner.nextDouble();
+
+                System.out.println("Digite o tempo: ");
+                double tempo = scanner.nextDouble();
+
+                mediaViagem = mediaViagem(distancia, tempo);
+
+                System.out.println("Media viagem: " + mediaViagem);
+
                 break;
             // 7) Crie um programa que calcule o percentual de imposto pago (`faturamento \ qtd imposto`)
             case 7:
@@ -60,6 +108,10 @@ public class ExercicioUm {
             // 8) Crie um programa que teste se um valor é par ou ímpar
             case 8:
                 // parOuImpar(int valor)
+
+                System.out.println("Digite um numero: ");
+
+                
                 break;
             // 9) Crie um programa que compare dois valores Strings
             case 9:
@@ -91,15 +143,16 @@ public class ExercicioUm {
     }
 
     public static double media(double notaUm, double notaDois, double notaTres) {
-        return 0;
+
+        return (notaUm + notaDois + notaTres) /3;
     }
 
     public static double area(double ladoUm, double ladoDois) {
-        return 0;
+        return (ladoUm * ladoDois);
     }
 
     public static double volume(double largura, double altura, double profundidade) {
-        return 0;
+        return (largura * altura * profundidade);
     }
 
     public static boolean valorMaiorQueDobro(double base, double verificar) {
@@ -111,7 +164,7 @@ public class ExercicioUm {
     }
 
     public static double mediaViagem(double distancia, double tempo) {
-        return 0;
+        return (distancia / tempo);
     }
 
     public static double percentualImposto(double faturamento, double qtdImposto) {
