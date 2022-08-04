@@ -84,6 +84,9 @@ public class ExercicioUm {
             // 5) Crie um programa que calcule _bhaskara_
             case 5:
                 // bhaskara(int a, int b, int c);
+
+                System.out.println();
+
                 break;
             // 6) Crie um programa que calcule a velocidade média de uma viagem (`distancia (km) / tempo (h)`)
             case 6:
@@ -116,10 +119,42 @@ public class ExercicioUm {
             // 9) Crie um programa que compare dois valores Strings
             case 9:
                 // compareString(String stringUm, String stringDois)
+                
+                System.out.println("Digite algo: ");
+                String string1 = scanner.nextLine();
+
+                System.out.println("Digite algo: ");
+                String string2 = scanner.nextLine();
+
+                if(string1.equals(string1)){
+
+                    System.out.printf("%s é igual ao %s ", string1, string2);
+                 }
+                 else{
+                    System.out.printf("%s é igual ao %s ", string1, string2);
+                 }
+
                 break;
             // 10) Crie um programa que tenha uma variável com ponto em String e converta seu valor para inteiro
             case 10:
                 // convertString(String valor);
+                boolean convertString;
+                int numero;
+                String valor11 = "14.23";
+
+                System.out.printf("/nEssa variavel string tem o valor da %s", valor11);
+
+                System.out.println("/nImforme numeros para ser convertido em int:" );
+                valor1= scanner.nextLine();
+
+                numero = convertString(valor11);
+
+
+           
+
+
+
+
                 break;
             // 11) Crie um programa que receba o salário e diga o valor de imposto de renda conforme abaixo:
             // Base                     | Alíquota
@@ -176,7 +211,7 @@ public class ExercicioUm {
     }
 
     public static boolean compareString(String stringUm, String stringDois) {
-        return false;
+        return (stringUm.equals(stringDois));
     }
 
     public static int convertString(String valor) {
